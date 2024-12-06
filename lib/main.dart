@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hackathon/auth/login_screen.dart';
 import 'package:hackathon/auth/register_screen.dart';
 
 void main() {
@@ -31,28 +32,35 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF0A5F2C)),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFFBE2831),
+        ),
         useMaterial3: true,
-        textTheme: GoogleFonts.montserratTextTheme(Theme.of(context).textTheme),
-        inputDecorationTheme: const InputDecorationTheme(
+        textTheme: GoogleFonts.montserratTextTheme(
+          Theme.of(context).textTheme,
+        ),
+        inputDecorationTheme: InputDecorationTheme(
           enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(40)),
+            borderRadius: const BorderRadius.all(Radius.circular(40)),
             borderSide: BorderSide(
               width: 1.4,
+              color: Colors.grey.shade300,
             ),
           ),
           focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(40)),
+            borderRadius: const BorderRadius.all(Radius.circular(40)),
             borderSide: BorderSide(
               width: 1.4,
+              color: Colors.grey.shade300,
             ),
           ),
           prefixIconColor: Colors.grey,
         ),
       ),
       routes: <String, WidgetBuilder>{
-        '/': (BuildContext context) => const RegisterScreen(),
+        '/': (BuildContext context) => const LoginScreen(),
         '/signup': (BuildContext context) => const RegisterScreen(),
+        '/login': (BuildContext context) => const LoginScreen(),
       },
     );
   }

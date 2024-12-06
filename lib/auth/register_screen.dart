@@ -21,7 +21,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
             children: [
               Container(
                 decoration: const BoxDecoration(
-                  color: Color(0xFF0A5F2C),
+                  color: Color(0xFFBE2831),
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(60),
                     bottomRight: Radius.circular(60),
@@ -56,14 +56,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       ),
                     ),
                     Text.rich(TextSpan(
-                      text: "Let's\n",
+                      text: "",
                       style: GoogleFonts.montserrat(
                         color: Colors.white,
                         fontSize: 35,
                       ),
                       children: [
                         TextSpan(
-                          text: "Create\nYour\nAccount",
+                          text: "Creer\nun\ncompte",
                           style: GoogleFonts.montserrat(
                             fontWeight: FontWeight.bold,
                           ),
@@ -172,11 +172,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         Expanded(
                           child: Text.rich(
                             TextSpan(
-                              text: 'I agree to the ',
+                              text: 'J\'accepte les ',
                               style: GoogleFonts.montserrat(),
                               children: [
                                 TextSpan(
-                                  text: 'Terms & Privacy',
+                                  text: 'termes et conditions',
                                   style: GoogleFonts.montserrat(
                                     color: const Color(0xFF0A5F2C),
                                     fontWeight: FontWeight.w500,
@@ -195,7 +195,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       width: double.infinity,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xFF0A5F2C),
+                          backgroundColor: const Color(0xFFBE2831),
                           foregroundColor: Colors.white,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(40),
@@ -207,7 +207,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         ),
                         onPressed: () {},
                         child: Text(
-                          'Sign Up',
+                          'Créer',
                           style: GoogleFonts.montserrat(
                             color: Colors.white,
                             fontSize: 20,
@@ -220,13 +220,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ),
                     Text.rich(
                       TextSpan(
-                        text: 'Have an account ? ',
+                        text: 'Vous avez déjà un compte? ',
                         style: GoogleFonts.montserrat(),
                         children: [
                           TextSpan(
-                            text: 'Sign In',
+                            text: 'Se connecter',
                             style: GoogleFonts.montserrat(
-                              color: const Color(0xFF0A5F2C),
+                              color: const Color(0xFFBE2831),
                               fontWeight: FontWeight.w500,
                             ),
                           ),
