@@ -158,7 +158,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                 vertical: 14,
                               ),
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/commercial');
+                            },
                             child: Text(
                               'Se connecter',
                               style: GoogleFonts.montserrat(

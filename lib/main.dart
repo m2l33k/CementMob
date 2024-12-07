@@ -1,9 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hackathon/auth/commercial_home.dart';
 import 'package:hackathon/auth/login_screen.dart';
 import 'package:hackathon/auth/register_screen.dart';
+import 'package:mapbox_maps_flutter/mapbox_maps_flutter.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  String accessToken =
+      "pk.eyJ1IjoiaGF5dGhlbWRyaWRpIiwiYSI6ImNscjkzOHhldTAxejkybG5wajh3aXBmdzUifQ.iBmYID0Cr_gcEvCwdj9Fvg";
+
+  MapboxOptions.setAccessToken(accessToken);
+
+  print("ACCESS_TOKEN is$accessToken");
+
   runApp(const MyApp());
 }
 
@@ -35,6 +46,10 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(
           seedColor: const Color(0xFFBE2831),
         ),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color(0xFFBE2831),
+          foregroundColor: Colors.white,
+        ),
         useMaterial3: true,
         textTheme: GoogleFonts.montserratTextTheme(
           Theme.of(context).textTheme,
@@ -57,10 +72,12 @@ class MyApp extends StatelessWidget {
           prefixIconColor: Colors.grey,
         ),
       ),
+      debugShowCheckedModeBanner: false,
       routes: <String, WidgetBuilder>{
         '/': (BuildContext context) => const LoginScreen(),
         '/signup': (BuildContext context) => const RegisterScreen(),
         '/login': (BuildContext context) => const LoginScreen(),
+        '/commercial': (BuildContext context) => const CommercialHome(),
       },
     );
   }
